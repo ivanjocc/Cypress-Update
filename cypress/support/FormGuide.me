@@ -1,0 +1,68 @@
+// FORM GUIDE (Carmen e Iván)
+
+
+// Text input
+// cy.get('#').type("random-object");
+
+
+// Drop-down (2 ways)
+// cy.get('#').select('value');
+// cy.get('#').select(number);
+
+
+// Checkbox
+// cy.get('#').check('value');
+// cy.get('#').check(number);
+// cy.get('#').check([array]);
+
+
+// Comandos
+
+Comandos para controlar el browser
+cy.visit(): para cargar una URL
+cy.reload(): para recargar la URL actual
+cy.go(‘back’): para ir hacia atrás o adelante en la navegación
+Comandos para selección de elementos
+cy.get(’.selector’): para seleccionar según un selector html / css
+cy.contains(‘text): para seleccionar de acuerdo al contenido
+cy.contains(’.selector’, ‘texto’): para seleccionar según el selector y el contenido
+Comandos para interactuar con los elementos
+cy.get(’.selector’).click(): para hacer click sobre un elemento
+cy.get(’.selector’).dblclick(): para hacer dblclick sobre un elemento
+cy.get(‘input’).type(): para escribir un texto
+cy.get(‘input’).clear(): para limpiar un texto
+cy.get(‘checkbox’).check(): para marcar check
+cy.get(‘checkbox’).uncheck(): para quitar el check
+cy.get(‘select’).select(‘item’): para seleccionar un item en una lista desplegable
+
+<h3>Aserciones</h3>
+Una aserción es lo que nos permite comprobar si el test está bien o no. Mientras no se hayan definido aserciones para nuestros tests, todos van a pasar como válidos.
+
+//chaiJS: web de aserciones qué podemos usar el cypress
+
+###Hooks
+Los Hooks son funciones o métodos que se ejecutan en determinados momentos del flujo de ejecución de los tests.
+Los que usaremos en nuestro proyecto son:
+
+before(): es una función que se ejecuta una vez antes de la ejecución de todos los tests del mismo grupo.
+beforeEach(): es una función que se ejecuta antes de cada test individual.
+afterEach(): es una función que se ejecuta después de cada test individual.
+after(): es una función que se ejecuta una vez, al finalizar la ejecución de todos los tests del mismo grupo.
+
+
+
+// LIZET
+
+// it("LLenar Campos Formulario", () => {
+//   cy.get("[data-qadp=form_firstname]");
+//   cy.get("[data-qadp=form_surname]");
+//   cy.get("[data-qadp=form_gender]");
+//   cy.get("[data-qadp=form_birthyear]");
+//   cy.get("[data-qadp=form_birthmonth]");
+//   cy.get("[data-qadp=form_birthday]");
+//   cy.get("[data-qadp=form_phone]");
+//   cy.get("[data-qadp=form_email]");
+//   cy.get("[data-qadp=form_tyc]");
+//   cy.get("[data-qadp=”form_mktg]");
+//   cy.get("[data-qadp=”form_submit]");
+// });
